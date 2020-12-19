@@ -58,7 +58,6 @@ public class LoginActivity extends AppCompatActivity {
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         launchMainActivity(userId);
     }
-//Commit
     private boolean checkEmailAndPassword(String email, String password){
 
         if(email.isEmpty()){
