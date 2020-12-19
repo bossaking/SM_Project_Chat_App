@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="little_padding">10sp</dimen>
+    <dimen name="medium_padding">20sp</dimen>
+    <dimen name="large_padding">40sp</dimen>
+
+    <dimen name="little_margin">10sp</dimen>
+    <dimen name="medium_margin">20sp</dimen>
+    <dimen name="large_margin">40sp</dimen>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.ChatForTwoActivity"
+        android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messages_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/little_padding"
+            android:layout_above="@id/bottom_layout"/>
+
+    <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:padding="@dimen/little_padding">
+
+        <EditText
+                android:id="@+id/message_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/send_message_button"
+                android:layout_centerVertical="true"
+                android:hint="@string/type_a_message"
+                android:autofillHints="@string/type_a_message"
+                android:inputType="textAutoComplete|textMultiLine"/>
+
+        <Button
+                android:id="@+id/send_message_button"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginStart="@dimen/little_margin"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@id/message_edit_text"
+                android:background="@drawable/ic_send"
+                android:enabled="false"
+                android:contentDescription="@string/send"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

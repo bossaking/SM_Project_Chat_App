@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#69f0ae</color>
+    <color name="colorPrimaryDark">#2bbd7e</color>
+    <color name="colorAccent">#1268b3</color>
+
+    <color name="greenButtonColor">#2ef0a2</color>
+    <color name="blueButtonColor">#1268b3</color>
+    <color name="foreignMessageColor">#00BCD4</color>
+    <color name="ownMessageColor">#4CAF50</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="blackColor">#000000</color>
+    <color name="grayColor">#737272</color>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Super Chat</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="application_image">application_image</string>
+    <string name="sign_in">Sign In</string>
+
+    <string name="empty_field_error">The field cannot be empty!</string>
+    <string name="not_valid_email_error">The e-mail address provided is incorrect!</string>
+    <string name="type_a_message">Type a message...</string>
+    <string name="send">send</string>
+    <string name="let_me_in">Let me in!</string>
+</resources>
