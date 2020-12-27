@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/single_group_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/little_padding">
+
+    <TextView
+            android:id="@+id/group_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EXAMPLE GROUP TITLE"
+            android:textAllCaps="true"
+            android:textSize="@dimen/large_text"/>
+
+    <TextView
+            android:id="@+id/group_language_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Polski"
+            android:textSize="@dimen/medium_text"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/greenButtonColor"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/little_margin"/>
+
+</LinearLayout>

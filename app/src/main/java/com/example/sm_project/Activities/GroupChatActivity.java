@@ -4,7 +4,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,14 +16,13 @@ import com.google.firebase.database.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class ChatForTwoActivity extends AppCompatActivity {
+import static com.example.sm_project.Activities.AllGroupsActivity.USER_ID;
+
+public class GroupChatActivity extends AppCompatActivity {
+
+    public static final String CHAT_ID = "";
 
     EditText messageEditText;
     Button sendMessageButton;
@@ -38,12 +36,15 @@ public class ChatForTwoActivity extends AppCompatActivity {
 
     SimpleDateFormat format;
 
+    private String chatId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_for_two);
+        setContentView(R.layout.activity_chat_group);
 
-        userId = getIntent().getStringExtra("USER_ID");
+        userId = getIntent().getStringExtra(USER_ID);
+        chatId = getIntent().getStringExtra(CHAT_ID);
         format = new SimpleDateFormat("HH:mm");
 
         messageEditText = findViewById(R.id.message_edit_text);
@@ -94,14 +95,14 @@ public class ChatForTwoActivity extends AppCompatActivity {
         messageMap.put("messageContext", message);
         messageMap.put("messageTime", localToUTC("HH:mm", format.format(new Date())));
 
-        reference.child("Chats").push().setValue(messageMap);
+        reference.child("Chats").child(chatId).push().setValue(messageMap);
 
         messageEditText.setText("");
     }
 
     private void readMessages(){
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Chats");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Chats").child(chatId);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

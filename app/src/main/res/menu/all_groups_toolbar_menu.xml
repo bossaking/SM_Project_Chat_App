@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:visible="false"
+            android:id="@+id/add_new_group_button"
+            android:title="@string/add_new_group"
+            android:icon="@drawable/ic_plus"
+            app:showAsAction="ifRoom"
+    />
+
+    <item
+            android:id="@+id/filters_groups_button"
+            android:title="@string/filters"
+            android:icon="@drawable/ic_settings"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:visible="false"
+            android:id="@+id/user_profile_button"
+            android:title="@string/user"
+            android:icon="@drawable/ic_user"
+            app:showAsAction="ifRoom"/>
+
+</menu>

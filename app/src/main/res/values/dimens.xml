@@ -9,4 +9,8 @@
     <dimen name="medium_margin">20sp</dimen>
     <dimen name="large_margin">40sp</dimen>
 
+    <dimen name="large_text">25sp</dimen>
+    <dimen name="medium_text">18sp</dimen>
+    <dimen name="small_text">10sp</dimen>
+
 </resources>

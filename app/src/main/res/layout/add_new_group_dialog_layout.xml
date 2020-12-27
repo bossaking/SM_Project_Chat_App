@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="@dimen/medium_padding">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/adding_a_new_group"
+            android:textSize="@dimen/large_text"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    <EditText
+            android:id="@+id/group_title_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/medium_margin"
+            android:textSize="@dimen/medium_text"
+            android:hint="@string/enter_group_title"/>
+
+    <Spinner
+            android:id="@+id/group_language_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/languages"
+            android:spinnerMode="dialog"
+            android:layout_marginBottom="@dimen/medium_margin"
+    />
+
+    <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/add_group_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:backgroundTint="@color/greenButtonColor"
+                android:text="@string/add"/>
+
+        <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/redColor"
+                android:text="@string/cancel"/>
+
+    </LinearLayout>
+
+</LinearLayout>

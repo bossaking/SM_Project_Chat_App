@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
-              tools:context=".Activities.LoginActivity">
+              tools:context=".Activities.RegistrationActivity">
 
     <ImageView
             android:id="@+id/application_image"
@@ -22,10 +22,25 @@
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/medium_margin"
+                android:layout_marginHorizontal="@dimen/medium_margin"
                 android:autofillHints="Login"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:id="@+id/nickname_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/nickname"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:hint="@string/nickname"
+                android:inputType="textAutoComplete"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -39,63 +54,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/medium_margin"
-                android:autofillHints="Password"
+                android:autofillHints="@string/password"
                 android:hint="@string/password"
                 android:inputType="textPassword"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:id="@+id/repeat_password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/medium_margin"
+                android:autofillHints="@string/repeat_password"
+                android:hint="@string/repeat_password"
+                android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
-            android:id="@+id/sign_in_button"
+            android:id="@+id/sign_up_button"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/large_margin"
             android:background="@drawable/button_with_ripple_effect"
-            android:text="@string/sign_in"
+            android:text="@string/sign_up_registration"
             android:textAllCaps="false"/>
 
-    <TextView
-            android:id="@+id/forgot_password_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/forgot_password"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:layout_marginBottom="@dimen/large_margin"/>
 
-    <LinearLayout
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/medium_margin">
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2sp"
-                android:text="@string/not_registered_yet"/>
-
-        <TextView
-                android:id="@+id/sign_up_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2sp"
-                android:textColor="@color/blueButtonColor"
-                android:text="@string/sign_up"/>
-
-
-    </LinearLayout>
-
-
-    <TextView
-            android:id="@+id/guest_login_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/let_me_in"
-            android:autoLink="web"/>
 
 </LinearLayout>
