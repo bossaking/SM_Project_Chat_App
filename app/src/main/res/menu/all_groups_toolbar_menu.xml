@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+            android:id="@+id/search_button"
+            android:title="@string/search"
+            android:icon="@drawable/ic_loupe"
+            app:showAsAction="always|collapseActionView"
+            app:actionViewClass="android.widget.SearchView"/>
+
+    <item
+            android:id="@+id/filters_groups_button"
+            android:title="@string/filters"
+            android:icon="@drawable/ic_settings"
+            app:showAsAction="always"/>
 
     <item
             android:visible="false"
@@ -8,16 +24,10 @@
             android:icon="@drawable/ic_plus"
             app:showAsAction="ifRoom"
     />
-
-    <item
-            android:id="@+id/filters_groups_button"
-            android:title="@string/filters"
-            android:icon="@drawable/ic_settings"
-            app:showAsAction="ifRoom"/>
     <item
             android:visible="false"
             android:id="@+id/user_profile_button"
-            android:title="@string/user"
+            android:title="@string/profile"
             android:icon="@drawable/ic_user"
             app:showAsAction="ifRoom"/>
 

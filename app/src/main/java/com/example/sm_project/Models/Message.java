@@ -1,11 +1,10 @@
 package com.example.sm_project.Models;
 
 public class Message {
-    private String sender, receiver, messageContext, messageTime;
+    private String sender, messageContext, messageTime;
 
-    public Message(String sender, String receiver, String messageContext, String messageTime){
+    public Message(String sender, String messageContext, String messageTime){
         this.sender = sender;
-        this.receiver = receiver;
         this.messageContext = messageContext;
         this.messageTime = messageTime;
     }
@@ -20,14 +19,6 @@ public class Message {
 
     public void setSender(String sender) {
         this.sender = sender;
-    }
-
-    public String getReceiver() {
-        return receiver;
-    }
-
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
     }
 
     public String getMessageContext() {

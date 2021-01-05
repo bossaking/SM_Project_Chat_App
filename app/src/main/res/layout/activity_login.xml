@@ -57,13 +57,50 @@
             android:textAllCaps="false"/>
 
     <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:layout_margin="@dimen/little_margin"/>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/sign_in_with_google_card_view"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/greenSecondColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_google"
+                    tools:ignore="ContentDescription"
+                    android:layout_margin="@dimen/little_margin"/>
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in_with_google"
+                    android:layout_margin="@dimen/little_margin"
+                    android:textStyle="bold"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
             android:id="@+id/forgot_password_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/forgot_password"
             android:layout_marginTop="@dimen/medium_margin"
-            android:layout_marginBottom="@dimen/large_margin"/>
+            android:layout_marginBottom="@dimen/little_margin"/>
 
     <LinearLayout
             android:gravity="center"
@@ -89,13 +126,5 @@
 
     </LinearLayout>
 
-
-    <TextView
-            android:id="@+id/guest_login_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/let_me_in"
-            android:autoLink="web"/>
 
 </LinearLayout>

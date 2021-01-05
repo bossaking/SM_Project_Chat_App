@@ -11,13 +11,13 @@
                 android:toDegrees="0">
             <shape android:shape="rectangle">
                 <corners android:radius="4dp"/>
-                <solid android:color="@color/foreignMessageColor" />
+                <solid android:color="@color/yellowSecondColor" />
             </shape>
         </rotate>
     </item>
     <item android:left="8dp">
         <shape android:shape="rectangle">
-            <solid android:color="@color/foreignMessageColor" />
+            <solid android:color="@color/yellowSecondColor" />
             <corners android:radius="4dp" />
         </shape>
     </item>

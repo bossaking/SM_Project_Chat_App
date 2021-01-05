@@ -12,7 +12,6 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title=" "
             app:menu="@menu/all_groups_toolbar_menu"/>
 
     <androidx.recyclerview.widget.RecyclerView

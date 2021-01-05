@@ -33,6 +33,7 @@
             android:paddingEnd="10dp"
             android:paddingBottom="15dp"
             android:textColor="@color/blackColor"
+            android:autoLink="web"
             android:text="aasdasdasd"/>
 
     </FrameLayout>

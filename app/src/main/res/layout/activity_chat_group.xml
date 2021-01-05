@@ -19,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-
             android:padding="@dimen/little_padding">
 
         <EditText
@@ -39,7 +38,7 @@
                 android:layout_marginStart="@dimen/little_margin"
                 android:layout_alignParentEnd="true"
                 android:layout_alignBottom="@id/message_edit_text"
-                android:background="@drawable/ic_send"
+                android:background="@drawable/ic_send_second"
                 android:enabled="false"
                 android:contentDescription="@string/send"/>
 

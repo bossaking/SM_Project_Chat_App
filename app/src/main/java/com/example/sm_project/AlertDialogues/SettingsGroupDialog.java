@@ -1,10 +1,10 @@
 package com.example.sm_project.AlertDialogues;
 
 import android.app.AlertDialog;
+import android.content.res.Resources;
+import android.graphics.Point;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,13 +13,17 @@ import com.example.sm_project.R;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Objects;
+
 public class SettingsGroupDialog extends DialogFragment {
 
-    Button deleteGroupButton;
+    Button deleteGroupButton, editGroupButton;
 
     private final String groupId;
+    private final String userId;
 
-    public SettingsGroupDialog(String groupId) {
+    public SettingsGroupDialog(String userId, String groupId) {
+        this.userId = userId;
         this.groupId = groupId;
     }
 
@@ -31,7 +35,15 @@ public class SettingsGroupDialog extends DialogFragment {
         deleteGroupButton = view.findViewById(R.id.delete_group_button);
         deleteGroupButton.setOnClickListener(view1 -> deleteGroup());
 
+        editGroupButton = view.findViewById(R.id.edit_group_button);
+        editGroupButton.setOnClickListener(view1 -> editGroup());
+        
         return view;
+    }
+
+    private void editGroup() {
+        AddNewGroupDialog addNewGroupDialog = new AddNewGroupDialog(userId, groupId);
+        addNewGroupDialog.show(getChildFragmentManager(), null);
     }
 
     private void deleteGroup() {
@@ -51,5 +63,16 @@ public class SettingsGroupDialog extends DialogFragment {
         deleteGroupDialog.show();
 
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Window window = Objects.requireNonNull(getDialog()).getWindow();
+
+        int width = Resources.getSystem().getDisplayMetrics().widthPixels;
+
+        window.setLayout(width, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setGravity(Gravity.CENTER);
     }
 }
